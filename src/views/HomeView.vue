@@ -1,18 +1,25 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<div>
+  <ExerciseList :exercises="exercises" />
+</div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import ExerciseList from "../components/ExerciseList.vue"
 
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
-  }
+    ExerciseList
+  },
+  data() {
+    return {
+    }
+  },
+  computed: {
+    exercises() {
+      return this.$root.$data.exercises;
+    }
+  },
 }
 </script>
