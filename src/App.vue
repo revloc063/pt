@@ -4,6 +4,7 @@
       <router-link to="/">Home</router-link>
       <router-link to="/type">Type</router-link>
       <router-link to="/chart">Chart</router-link>
+      <router-link to="/add">Add</router-link>
     </nav>
     <router-view/>
   </div>
@@ -19,15 +20,15 @@
 }
 
 nav {
-  padding: 30px;
+  padding: 50px;
+  background-color: #3366ff;
 }
 
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #ffffff;
+  padding: 20px;
+  text-decoration: none;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>

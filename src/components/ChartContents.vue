@@ -1,15 +1,15 @@
 <template>
 <div class="wrapper">
-  <div class="cart">
+  <div class="chart">
     <div class="task" v-for="task in chart" :key="task.id">
       <div class="info">
-        <h1>{{task.name}}</h1>
-        <p>{{}}</p>
+        <h1>{{task.abb}}</h1>
       </div>
-      <div class="price">
-        <h2>{{}}</h2>
-        <button class="auto" v-on:click="removeTask(task)">Remove</button>
+      <div class="info">
+        <p>{{task.tips}}</p>
+        <p>{{task.duration}}</p>
       </div>
+      <button class="auto" v-on:click="deleteTask(task)">Remove</button>
     </div>
   </div>
 </div>
@@ -22,7 +22,7 @@ export default {
     chart: Array
   },
   methods: {
-    removeTask(task) {
+    deleteTask(task) {
     var index = this.$root.$data.chart.indexOf(task);
     if (index > -1)
       this.$root.$data.chart.splice(index,1);
@@ -30,3 +30,13 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+button {
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid #809fff;
+  background-color: #99b3ff;
+  color: #ffffff;
+}
+</style>

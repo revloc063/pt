@@ -2,9 +2,9 @@
 <div>
   <div class="pure-menu pure-menu-horizontal">
     <ul class="pure-menu-list">
-      <li class="pure-menu-item"><a @click="select('TKE')" href="#" class="pure-menu-link">TKE</a></li>
-      <li class="pure-menu-item"><a @click="select('THE')" href="#" class="pure-menu-link">THE</a></li>
-      <li class="pure-menu-item"><a @click="select('Gen Wkns')" href="#" class="pure-menu-link">Gen Wkns</a></li>
+      <li class="pure-menu-item"><a @click="select('TKA')" href="#" class="pure-menu-link">Total Knee Replacement (TKA)</a></li>
+      <li class="pure-menu-item"><a @click="select('THA')" href="#" class="pure-menu-link">Total Hip Replacement (THA)</a></li>
+      <li class="pure-menu-item"><a @click="select('Gen wkns')" href="#" class="pure-menu-link">General Weakness</a></li>
     </ul>
   </div>
   <ExerciseList :exercises="exercises" />
@@ -35,3 +35,18 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 20px;
+}
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: #3366ff;
+}
+
+</style>

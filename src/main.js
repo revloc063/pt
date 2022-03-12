@@ -8,7 +8,9 @@ import mock from './mock-data.js'
 
 let data = {
   exercises: mock,
-  chart: []
+  chart: [],
+  add: {},
+  added: [],
 }
 
 new Vue({

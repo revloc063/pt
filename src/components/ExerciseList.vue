@@ -3,11 +3,10 @@
   <div class="exercises">
     <div class="exercise" v-for="exercise in exercises" :key="exercise.id">
       <div class="info">
-        <h1>{{exercise.name}}</h1>
-        <p>{{exercise.abb}}</p>
+        <h1>{{exercise.name}} ({{exercise.abb}})</h1>
       </div>
       <div class="duration">
-        <h2>{{exercise.duration}}</h2>
+        <h3>{{exercise.duration}}</h3>
         <button class="auto" v-on:click="addExercise(exercise.id)">Add to Chart</button>
       </div>
     </div>
@@ -32,5 +31,23 @@ export default {
 </script>
 
 <style scoped>
-
+.exercises {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.exercise {
+  width: 25%;
+}
+.duration {
+  display: flex;
+  justify-content: space-around;
+}
+button {
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid #809fff;
+  background-color: #99b3ff;
+  color: #ffffff;
+}
 </style>
